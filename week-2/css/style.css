@@ -5,6 +5,7 @@ Base Styles
 
 :root {
     --primary-color: #2076cc;
+    --dark-color: #434e64;
 }
 
 * {
@@ -47,75 +48,47 @@ img {
 
 /* Navbar */
 
-.navbar {
-    background-color: var(--primary-color);
-    color: #fff;
-    box-shadow: 0px 1px 3px #00000088;
-}
-
-.navbar::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-
-.navbar h1 {
-    float: left;
-    font-size: 17px;
-    padding-left: 50px;
-    line-height: 50px;
-}
-
-input[type="checkbox"] {
+.fas {
+    float: right;
     display: none;
 }
 
-
-label {
-    float: right;
-    padding-right: 20px;
-    margin-top: 15px;
-    line-height: 50px;
+.aside {
+    overflow: hidden;
+    width: 0px;
+    position: absolute;
 }
 
-label i:hover {
-    color: rgb(130, 184, 181);
+.header {
+    background-color: var(--primary-color);
+    height: 40px;
 }
 
-.menu {
-    clear: both;
-    background-color: rgb(130, 184, 181);
+.header h1 {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    padding-top: .4em;
+    padding-left: .5em;
+    margin-top: 0;
 }
+
 
 .menu li {
-    text-align: center;
-    border-bottom: 2px solid rgb(207, 189, 189);
+    float: right;
+    padding-right: 2em;
 }
 
 .menu a {
-    display: block;
-    padding: 10px 0;
-    font-size: 18px;
     color: #fff;
+    font-size: 16px;
+    line-height: 50px
 }
 
 .menu a:hover {
-    background-color: #fff;
-    color: royalblue;
+    border-bottom: 2px solid turquoise;
+    color: turquoise;
 }
-
-
-.menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: .8s;
-}
-
-input[type="checkbox"]:checked~.menu {
-    max-height: 300px;
-}
-
 
 /* Showcase */
 
@@ -125,11 +98,12 @@ input[type="checkbox"]:checked~.menu {
     color: #333;
     position: relative;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .showcase .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
     overflow: visible;
 }
 
@@ -147,10 +121,10 @@ input[type="checkbox"]:checked~.menu {
     font-size: 18px;
 }
 
-
 .showcase-text {
     animation: slideInFromRight 1s ease-in;
 }
+
 
 .showcase-form {
     position: relative;
@@ -158,7 +132,7 @@ input[type="checkbox"]:checked~.menu {
     height: 380px;
     width: 400px;
     padding: 30px;
-    z-index: 100;
+    z-index: 1;
     animation: slideInFromLeft 1s ease-in;
 }
 
@@ -214,6 +188,10 @@ input[type="checkbox"]:checked~.menu {
     transition: transform 0.2s ease-out;
 }
 
+main:hover {
+    cursor: pointer;
+}
+
 /* Animation */
 
 @keyframes slideInFromRight {
@@ -239,7 +217,7 @@ input[type="checkbox"]:checked~.menu {
 /* Stats */
 
 .stats {
-    padding-top: 320px;
+    padding-top: 100px;
     background: #fcee2e;
 }
 
@@ -266,20 +244,19 @@ input[type="checkbox"]:checked~.menu {
 }
 
 .stats .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* News */
 
 .news .flex {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
+
 .news .card {
-    width: 100%;
+    width: 45%;
     height: 25rem;
     background-color: #fff;
     transition: transform 0.2s ease-in;
@@ -300,11 +277,24 @@ input[type="checkbox"]:checked~.menu {
     font-size: 18px;
 }
 
+.buttonNews {
+    margin: 50px;
+}
+
+.btn-showMore {
+    cursor: pointer;
+}
+
+.flex-more {
+    display: none;
+    flex-wrap: wrap;
+}
+
+
 /* Broadcast */
 
 .broadcast .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 4fr 3fr;
 }
 
 .bg-primary {
@@ -400,8 +390,101 @@ input[type="checkbox"]:checked~.menu {
   *************************/
 
 
-@media screen and (min-width: 501px) {
+@media screen and (max-width: 800px) {
 
+    /* .outContainer {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        top: 0;
+        transition: .5s;
+        background-color: rgba(3, 3, 3, 0.95);
+        white-space: nowrap;
+        position: relative;
+        bottom: 0;
+    } */
+
+    .header h1 {
+        float: left;
+    }
+
+    .fas {
+        display: inline-block;
+    }
+
+    .header .mobile-open {
+        font-size: 15px;
+        float: right;
+        padding: .3em .5em;
+        color: #fff
+    }
+
+    .header .mobile-open:hover {
+        color: turquoise;
+    }
+
+    .aside {
+        overflow: hidden;
+        width: 0px;
+        height: 100%;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        padding-top: 50px;
+        transition: .5s;
+        background-color: rgba(10, 57, 59, 0.95);
+        white-space: nowrap;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .aside a {
+        padding: 8px 8px 8px 32px;
+        font-size: 20px;
+        color: #fff;
+        display: block;
+        transition: .3s;
+    }
+
+    .aside a:hover {
+        color: aquamarine;
+    }
+
+    .aside li:hover {
+        background-color: rgb(24, 43, 41);
+        transition: all 0.3s;
+    }
+
+    .aside .mobile-close {
+        position: absolute;
+        top: 0;
+        right: -5px;
+        font-size: 15px;
+        margin-right: 10px;
+        overflow: hidden;
+    }
+
+    .menu {
+        display: none;
+        float: right;
+        transition: all 0.5s
+    }
+
+    .menu li {
+        float: right
+    }
+
+    .menu a {
+        color: #fff;
+        line-height: 50px;
+        border-bottom: 1px dashed var(--primary-color);
+        transition: all 0.5s
+    }
+
+    .menu a:hover {
+        color: turquoise;
+    }
 
     .showcase .grid {
         grid-template-columns: 1fr;
@@ -414,10 +497,12 @@ input[type="checkbox"]:checked~.menu {
 
     .showcase-text {
         margin-top: 20px;
+        text-align: center;
     }
 
     .showcase-form {
         margin: auto;
+        text-align: center;
     }
 
     .showcase h1 {
@@ -451,68 +536,37 @@ input[type="checkbox"]:checked~.menu {
         width: 310px;
         height: 170px;
     }
+
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (max-width: 500px) {
 
     .grid,
     .stats .grid,
-    .flex {
-        max-width: 1200px;
-    }
-
-    label {
-        display: none;
-    }
-
-    .menu {
-        float: right;
-        clear: none;
-        max-height: 50px;
-        background-color: #2076cc;
-        padding: 20px;
-    }
-
-    .menu li {
-        display: inline-block;
-        margin: 3px;
-
-    }
-
-    .menu li a:hover {
-        border-bottom: 4px royalblue solid;
-        color: royalblue;
-    }
-
-    .menu a {
-        padding: 0 15px;
-    }
-
-    .showcase .grid {
-        grid-template-columns: 2fr 1fr;
+    .showcase .grid,
+    .broadcast .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 
     .showcase-text {
-        text-align: left;
+        text-align: center;
     }
 
     .showcase-form {
-        text-align: left;
+        text-align: center;
     }
 
     .news .flex {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
     }
 
     .news .card {
-        width: 45%;
+        width: 100%;
     }
 
-    .broadcast .grid {
-        grid-template-columns: 4fr 3fr;
-    }
 
     .footer-logo {
         justify-self: center;
@@ -521,19 +575,5 @@ input[type="checkbox"]:checked~.menu {
 
     .social {
         justify-self: center;
-    }
-}
-
-@media screen and (min-width: 950px) {
-    .showcase-text {
-        margin-left: 80px;
-    }
-
-    .showcase h1 {
-        font-size: 42px;
-    }
-
-    .showcase-text p {
-        font-size: 22px;
     }
 }

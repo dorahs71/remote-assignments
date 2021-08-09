@@ -19,22 +19,17 @@
 <body>
 
     <!-- Navbar -->
-    <header>
-    <div class="nav">
-         <h1>2020東京奧運 ｜中華台北代表隊</h1>
-         <div class="nav-mark">
-                <label for="menu-control" class="menu-btn">
-                    <i class="fas fa-bars fa-2x"></i></label>
-                </div>
-                </div>
-                <input type="checkbox" name="" id="menu-control">
-                    <ul class="menu">
-                        <li><a href="index.html">首頁</a></li>
-                        <li><a href="timetable.html">賽程表</a></li>
-                        <li><a href="player.html">選手介紹</a></li>
-                        <li><a href="https://udn.com/tokyo2020/cate/122193" target="_blank">最新報導</a></li>
-                    </ul>
-                </header>
+    <nav class="navbar">
+        <h1>2020東京奧運 ｜中華台北代表隊</h1>
+        <label for="switch"><i class="fas fa-bars fa-2x"></i></label>
+        <input type="checkbox" id="switch">
+        <ul class="menu">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="timetable.html">賽程表</a></li>
+            <li><a href="player.html">選手介紹</a></li>
+            <li><a href="https://udn.com/tokyo2020/cate/122193" target="_blank">最新報導</a></li>
+        </ul>
+    </nav>
 
     <!-- Showcase -->
     <section class="showcase">
@@ -50,13 +45,27 @@
                 <p>若想每天收到中華代表隊的最新賽程表，以及選手的賽事成績，歡迎填寫以下表格！</p>
                 <form>
                     <div class="form-control">
-                        <input type="text" name="gender" placeholder="性別" required>
+                        <select name="gender" required>
+                            <option value="male">請選擇您的性別</option>
+                            <option value="male">男性</option>
+                            <option value="female">女性</option>
+                            <option value="other">其他</option>
+                        </select>
                     </div>
                     <div class="form-control">
-                        <input type="number" name="age" placeholder="年齡" required>
+                        <select name="age" required>
+                            <option value="">請選擇您的年齡</option>
+                            <option value="under18">18歲以下</option>
+                            <option value="18-25">18~25歲</option>
+                            <option value="26-35">26~35歲</option>
+                            <option value="26-45">36~45歲</option>
+                            <option value="46-55">46~55歲</option>
+                            <option value="56-65">56~65歲</option>
+                            <option value="above65">65歲以上</option>
+                        </select>
                     </div>
                     <div class="form-control">
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="請輸入您的e-mail" required>
                     </div>
                     <input type="submit" id="demo" class="btn btn-primary" onclick="sendForm()" value="送出"></input>
                 </form>
@@ -84,7 +93,7 @@
                 </div>
                 <div>
                     <img src="img/bronze.png" alt="">
-                    <h3>4</h3>
+                    <h3>6</h3>
                     <p class="text-secondary">銅牌</p>
                 </div>
             </div>
@@ -102,7 +111,8 @@
             </div>
             <div class="card">
                 <a href="https://udn.com/news/story/122254/5641793" target="_blank"><img
-                        src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/07/28/realtime/13144910.jpeg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1" alt=""></a>
+                        src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/07/28/realtime/13144910.jpeg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1"
+                        alt=""></a>
                 <p><strong>鞍馬王子奪銀寫歷史</strong><br>李智凱翻滾15年終圓夢</p>
             </div>
             <div class="card">
@@ -134,7 +144,7 @@
     <section class="broadcast bg-primary my-2 py-2">
         <div class="container grid">
             <div class="text-center">
-                <h2 class="lg">賽程轉播</h2>
+                <h2 class="md">賽程轉播</h2>
                 <p class="lead my-1">感謝各位合作夥伴的贊助和賽事轉播</p>
                 <a href="https://eltaott.tv/tokyo2020" class="btn btn-outline">Read More</a>
             </div>
