@@ -1,4 +1,23 @@
 /*************************
+Show/Close Menu
+*************************/
+const open = document.querySelector('.mobile-open');
+const close = document.querySelector('.mobile-close');
+const aside = document.querySelector('.aside');
+const over = document.querySelector('#overly');
+
+open.addEventListener('click', () => {
+  aside.style.width = "250px";
+  over.style.display = "block";
+});
+
+close.addEventListener('click', () => {
+  aside.style.width = "0px";
+  over.style.display = "none";
+});
+
+
+/*************************
 Change showcase h1
 *************************/
 
@@ -12,21 +31,6 @@ main.addEventListener('click', () => {
   main.style.cursor = 'default';
 });
 
-/*************************
-Show/Close Menu
-*************************/
-const open = document.querySelector('.mobile-open');
-const close = document.querySelector('.mobile-close');
-const aside = document.querySelector('.aside');
-
-open.addEventListener('click', () => {
-  aside.style.width = "250px";
-});
-
-close.addEventListener('click', () => {
-  aside.style.width = "0px";
-});
-
 
 /*************************
 Show More Button
@@ -35,13 +39,15 @@ Show More Button
 const showMore = document.querySelector('.btn-showMore');
 const moreNews = document.querySelector('.flex-more');
 
+
 showMore.addEventListener('click', () => {
-  if (moreNews.style.display == "none") {
+  if (moreNews.style.display == 'none') {
     showMore.textContent = '新聞變少吧';
     moreNews.style.display = 'flex';
+    console.log(moreNews.style.display);
   } else {
     showMore.textContent = '點我看更多';
-    moreNews.style.display = "none";
+    moreNews.style.display = 'none';
   }
 });
 
