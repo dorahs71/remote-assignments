@@ -4,11 +4,9 @@ const router = express.Router();
 router.get("/", (req, res) => {
   const name = req.cookies.username;
   if (name) {
-    res.render("myName", {
-      name,
-    });
+    res.render("myName", { name });
   } else {
-    res.redirect("/trackName");
+    res.render("myName");
   }
 });
 

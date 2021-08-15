@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 const cookieParser = require("cookie-parser");
 
 const app = express();
@@ -19,12 +18,12 @@ app.get("/", (req, res) => {
 app.set("view engine", "pug");
 
 const dataRoutes = require("./route/data");
-const trackRoutes = require("./route/trackName");
 const myRoutes = require("./route/myName");
+const trackRoutes = require("./route/trackName");
 
 app.use("/getData", dataRoutes);
-app.use("/trackName", trackRoutes);
 app.use("/myName", myRoutes);
+app.use("/trackName", trackRoutes);
 
 app.use((req, res, next) => {
   const err = new Error("Not Found!");

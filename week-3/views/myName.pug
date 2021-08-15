@@ -11,4 +11,9 @@ html(lang='en')
       .hello
           if name
             h1 Welcome, #{name}!
+          else
+            form.name-form(action='/trackName' method='POST')
+              label.name-q Please enter your name
+                 input.username(type='text' name='username' placeholder='Please key your name')
+              button.namecard-add(type='submit') Start
         
