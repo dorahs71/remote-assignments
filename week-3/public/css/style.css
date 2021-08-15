@@ -1,0 +1,161 @@
+body {
+  position: relative;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #ebe3b3;
+  font-size: 14px;
+}
+
+header img {
+  width: 100%;
+  max-width: 350px;
+}
+
+body {
+  background-color: #4244d4;
+  font-family: "Century Gothic", "sans-serif";
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+  padding-top: 0.5em;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.num-q,
+.name-q {
+  font-size: 30px;
+  font-weight: 400;
+  color: #333;
+}
+
+.numcard {
+  display: flex;
+  flex-direction: column;
+  background-color: #edead9;
+  color: coral;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.namecard {
+  display: flex;
+  flex-direction: column;
+  background-color: #edead9;
+  color: coral;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer {
+  font-weight: 400;
+  font-size: 40px;
+  margin: 0.5em;
+  color: indianred;
+}
+
+.namecard-add {
+  margin-top: 30px;
+  background-color: #fff;
+  border: 2px solid rgb(187, 54, 31);
+  font-size: 20px;
+  padding: 8px 10px;
+  color: rgb(187, 54, 31);
+  font-family: "Century Gothic";
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.numcard-add {
+  margin-top: 30px;
+  background-color: #fff;
+  border: 2px solid rgb(187, 54, 31);
+  font-size: 20px;
+  padding: 8px 10px;
+  color: rgb(187, 54, 31);
+  font-family: "Century Gothic";
+  width: 70%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.numcard-add:hover,
+.namecard-add:hover {
+  background-color: rgb(187, 54, 31);
+  color: #fff;
+}
+
+.number,
+.username {
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  color: royalblue;
+  border-radius: 10px;
+  border-color: rgb(172, 207, 211);
+  font-size: 20px;
+}
+
+#ans {
+  width: 100%;
+  font-size: 40px;
+  margin: 0;
+  line-height: 0em;
+  background-color: rgb(151, 184, 103);
+  color: rgb(70, 58, 116);
+}
+
+/* Placeholder */
+
+::placeholder {
+  color: rgb(202, 174, 174);
+}
+
+::-webkit-input-placeholder {
+  color: rgb(202, 174, 174);
+}
+
+::-moz-placeholder {
+  color: rgb(202, 174, 174);
+}
+
+:-ms-input-placeholder {
+  color: rgb(202, 174, 174);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}

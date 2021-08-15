@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>+Sum+</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/sum.png" />
+      <h2>Let's add numbers together!</h2>
+    </header>
+
+    <section class="numcard">
+      <div class="hello">
+        <h1>Welcome to this web !</h1>
+      </div>
+
+      <h2 class="num-q">What number you want to add today?</h2>
+      <input
+        class="number"
+        type="text"
+        name="number"
+        placeholder="Please key in a number"
+      />
+      <button class="numcard-add" onclick="sendAns()">Add</button>
+
+      <h2 class="answer">Answer</h2>
+      <div id="ans"></div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

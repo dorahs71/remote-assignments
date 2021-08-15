@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    title +Sum+
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    header
+      img(src='img/sum.png')
+      h2 Let's add numbers together!
+    section.namecard
+      .hello
+        h1 Welcome to this web !
+      form.name-form(action='/trackName' method='post')
+        label.name-q Please enter your name
+        input.username(type='text' name='username' placeholder='Please key your name')
+        button.namecard-add(type='submit') Start

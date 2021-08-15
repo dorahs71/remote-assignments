@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+  head
+    title +Sum+
+  body
+    section.desk
+      h1= `${error.message} - Status: ${error.status}`
+      .paper
+        pre.stack-trace= error.stack
+      
